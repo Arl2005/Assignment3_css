@@ -1,0 +1,327 @@
+/* css applied */
+
+/* font imported */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* basic design for whole html */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth; /* to just smoother the scrolling nature */
+}
+
+/* formatting body by providing background color and blending it in dark mode */
+body {
+    background: rgba(194, 188, 188, 0.867);
+    background-blend-mode: darken;
+}
+
+/* section is used to absolute the position of area and providing it dimension */
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* designing header and aligning its elements */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* styling the navigation menu */
+header nav menu {
+    position: relative;
+    display: flex;
+}
+
+/* styling the list items in the menu */
+header nav menu li {
+    list-style: none;
+    font-size: 25px;
+}
+
+/* styling the anchor tags in the menu */
+header nav menu li a {
+    display: inline-block;
+    margin-left: 60px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgba(66, 20, 5, 0.963);
+    padding: 9px;
+}
+
+/* hover effect for menu anchor tags */
+header nav menu li a:hover {
+    background-color: rgba(66, 20, 5, 0.963);
+    color: #fff;
+}
+
+/* styling the container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* styling the content section */
+.content {
+    width: 50%;
+    margin-top: 50px;
+}
+
+/* styling the main heading */
+.content h1 {
+    font-size: 3em;
+    color: rgb(19, 19, 19);
+    font-weight: normal;
+}
+
+/* styling the span in the main heading */
+.content h1 span {
+    color: rgba(130, 17, 161, 0.864);
+    font-weight: bold;
+}
+
+/* styling the secondary heading */
+.content h2 {
+    color: rgb(15, 14, 14);
+    line-height: 50px;
+}
+
+/* styling the paragraph */
+.content p {
+    color: rgb(13, 13, 14);
+    padding-top: 20px;
+}
+
+/* styling the anchor tags in the content */
+.content a {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: rgba(130, 17, 161, 0.864);
+    border-radius: 50px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin-top: 50px;
+}
+
+/* styling the products section */
+.products {
+    margin-top: 200px;
+}
+
+/* removing list style from list items in click class */
+.click li {
+    list-style: none;
+}
+
+/* styling the images in click class */
+.click img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 30px 0 0 30px;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 15px;
+}
+
+/* hover effect for images in click class */
+.click img:hover {
+    transform: translateX(-15px);
+}
+
+/* styling the ball class */
+.ball {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    clip-path: circle(500px at right 600px);
+    background: rgba(66, 20, 5, 0.963);
+}
+
+/* styling the product section */
+#product {
+    float: left;
+    margin-top: 740px;
+    background-image: url(/images/background_product_side.jpeg);
+    background-size: contain;
+    background-blend-mode: darken;
+    border-radius: 9px;
+    padding-bottom: 10px;
+}
+
+/* styling the heading in the product section */
+.product .heading h2 {
+    color: white;
+    line-height: 50px;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px #020202;
+}
+
+/* initial styling for product section */
+.product {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+/* styling for active state of product section */
+.product.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* styling the product row */
+.product .product-row {
+    margin-bottom: 5rem;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* styling the boxes in the product row */
+.product .product-row .box {
+    display: flex;
+    flex-direction: row;
+    width: 50rem;
+    background-color: white;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    border-radius: 3rem;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* hover effect for the boxes in the product row */
+.product .product-row .box:hover {
+    transform: scale(1.1);
+}
+
+/* styling the images in the product row */
+.product .product-row .img img {
+    height: 80%;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* hover effect for the images in the product row */
+.product .product-row .img img:hover {
+    transform: scale(1.1);
+}
+
+/* styling the content in the product row */
+.product .product-row .content {
+    margin-bottom: 4rem;
+}
+
+/* styling the headings in the product content */
+.product .product-row .product-content h3 {
+    font-size: 4rem;
+    color: black;
+}
+
+/* styling the paragraphs in the product content */
+.product .product-row .product-content p,
+.product .product-row .product-content pre {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: rgba(123, 5, 5, 0.649);
+}
+
+/* styling the explain section in the product content */
+.product .product-row .product-content .explain {
+    height: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* styling the buttons in the explain section */
+.product .product-row .product-content .explain button {
+    font-size: 1.8rem;
+    background-color: rgba(123, 5, 5, 0.649);
+    color: white;
+    border-radius: 0.7rem;
+    padding: 0.7rem 2rem;
+    cursor: pointer;
+}
+
+/* hover effect for the buttons in the explain section */
+.product .product-row .product-content .explain button:hover {
+    font-size: 2rem;
+}
+
+/* styling the footer */
+footer {
+    position: relative;
+    width: 100%;
+    background-color: rgba(168, 107, 184, 0.682);
+    margin-top: 2264px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* styling the form in the footer */
+footer form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* styling the labels in the form */
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #090909;
+}
+
+/* styling the inputs in the form */
+input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+/* styling the buttons in the form */
+button {
+    background-color: #fcfdfe;
+    color: rgba(130, 17, 161, 0.864);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* hover effect for the buttons */
+button:hover {
+    background-color: rgba(123, 5, 5, 0.649);
+    color: #fff;
+}
